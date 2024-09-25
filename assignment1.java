@@ -14,11 +14,13 @@ public class Assignment1 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Input the rectangles length");
         System.out.print("Input the rectangles wigth");
         length = sc.nextInt();
+        wigth=sc.nextInt();
+        System.out.print("Area is : %d x %d = %d\n", length, wigth, length,* wigth);
+        sc.close();
     }
     
 }
