@@ -3,24 +3,29 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package assignment1;
+package javaapplication2;
+import java.lang.Math;
+import java.lang.Integer;
 import java.util.Scanner;
+
 /**
  *
  * @author 981834
  */
-public class Assignment1 {
+public class JavaApplication2 {
 
     /**
      * @param args the command line arguments
      */
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Input the rectangles length");
-        System.out.print("Input the rectangles wigth");
-        length = sc.nextInt();
-        wigth=sc.nextInt();
-        System.out.print("Area is : %d x %d = %d\n", length, wigth, length,* wigth);
-        sc.close();
+    
+    public static void main(String[] args) {
+    int length;
+    int width; 
+    Scanner sc = new Scanner (System.in);
+    System.out.println("length is");
+    System.out.println("width is");
+    length = sc.nextInt();
+    width = sc.nextInt();
     }
     
 }
