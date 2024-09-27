@@ -22,10 +22,11 @@ public class JavaApplication2 {
     int length;
     int width; 
     Scanner sc = new Scanner (System.in);
-    System.out.println("length is");
-    System.out.println("width is");
-    length = sc.nextInt();
+    System.out.println("length is ");
     width = sc.nextInt();
+    System.out.println("width is ");
+    length = sc.nextInt();
+    System.out.println(length * width);
     }
     
 }
