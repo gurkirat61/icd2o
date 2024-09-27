@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javaapplication2;
+package javaapplication1;
 import java.lang.Math;
 import java.lang.Integer;
 import java.util.Scanner;
@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author 981834
  */
-public class JavaApplication2 {
+public class JavaApplication1 {
 
     /**
      * @param args the command line arguments
