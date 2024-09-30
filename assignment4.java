@@ -3,7 +3,7 @@ import java.lang.Math;
 import java.util.Scanner;
 /**
  *
- * @author 957353
+ * @author Gurkirat 981834
  */
 public class JavaApplication5{
 
