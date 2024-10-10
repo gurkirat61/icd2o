@@ -1,11 +1,10 @@
-package javaapplication5;
 import java.lang.Math;
 import java.util.Scanner;
 /**
  *
  * @author Gurkirat 981834
  */
-public class JavaApplication5{
+public class Assignment1{
 
     /**
      * @param args the command line arguments
