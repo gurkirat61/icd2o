@@ -35,7 +35,7 @@ public class Assignment1{
         G = 9.8;
         System.out.print("input meters: ");
         L = sc.nextInt();
-        System.out.print((Math.PI*Math.PI)Math.sqrt(L/G));
+        System.out.print((Math.PI*Math.PI)+Math.sqrt(L/G));
     }
    
 }
