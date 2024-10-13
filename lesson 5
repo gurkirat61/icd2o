@@ -1,0 +1,19 @@
+import java.util.Scanner ; 
+
+public class Main {
+    public static void main(String[] args) {
+  int yearofbirth, age;
+  Scanner n = new Scanner(System.in);
+  System.out.print("Enter user's age");
+  age=n.nextInt();
+  System.out.print("Enter year of birth");
+  yearofbirth=n.nextInt();
+  yearofbirth= yearofbirth*2;
+  yearofbirth= yearofbirth+5;
+  yearofbirth= yearofbirth*50+age;
+  yearofbirth= yearofbirth-250;
+  yearofbirth= yearofbirth/100;
+  System.out.print(yearofbirth);
+  
+    }
+}
