@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class marks {  
+   public static void main(String [] args) {
+     Scanner n = new Scanner(System.in);
+     int Marks;
+      System.out.print("Please Enter your marks - ");
+      Marks= n.nextInt();
+       if (Marks >= 80) {
+        System.out.print("Your grade is A");
+      } else if (Marks >= 70){
+        System.out.print("Your grade is B");
+      } else if (Marks >= 60){
+        System.out.print("Your grade is C");
+      } else if (Marks >= 50){
+        System.out.print("Your grade is D");
+      } else if (Marks >= 40){
+        System.out.print("Your grade is F");
+      }
+      
+   }
+}
+
+
+
+   
