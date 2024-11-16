@@ -1,0 +1,25 @@
+// any import statements go here!
+import java.util.Scanner;
+
+public class Calc {
+    public static void main(String[] args) {
+        Scanner kb = new Scanner(System.in);
+  	int choice = 0;
+  	boolean valid = false;
+  	int i=1;
+  	while (i<=5) {
+  		System.out.print("guess a number from 1 to 10: ");
+  		choice = kb.nextInt();
+  		valid = ((choice >= 1) && (choice <= 10));
+  		if (! valid ){
+  		System.out.print("Incorrect! ");
+  		}
+  		else{
+  		  System.out.print("Right Answer! ");
+  		}
+  		i++;
+  	}
+        
+        // Yout code stops here!
+    }
+}
