@@ -5,7 +5,7 @@ import java.lang.Math;
 
 class Main {
     public static void main(String [] args) {
-        for (int x = 0; x < 12; x++) {
+        for (int x = 0; x < 13; x++) {
             double sr = Math.sqrt(x);
             System.out.printf("%d %.14f\n", x, sr);
         }
