@@ -1,0 +1,41 @@
+// import scanner
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+    // make the scanner an object
+    Scanner sc = new Scanner(System.in);
+    String choice="y";
+    do{
+    
+    int n, max=0 , count=0;
+    // take input from user 
+    System.out.print("Enter a whole number > 0: " );
+    n= sc.nextInt();
+    //use while loop 
+    while(n>1){
+        count++;
+        if(n>max){
+            max=n;
+            
+        }
+        // if (n%2==0) is for checking even numbers
+        if (n%2==0){
+            int result = n/2;
+            System.out.printf("%d is even, so %d /2=%d\n",n,n,result);
+            n=result;
+        }
+        else{
+            int result = (n*3)+1;
+            System.out.printf("%d is odd, so %d *3=%d\n",n,n,result);
+            n=result;
+            
+        }
+    }
+    System.out.println("number of terms = "+count);
+    System.out.println("Highest value reached = "+max);
+    System.out.print("Do another? (y/n)");
+    choice=sc.next();
+    }
+    while(choice.equals("y"));
+    }
+}
