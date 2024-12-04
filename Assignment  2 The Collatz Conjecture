@@ -7,10 +7,11 @@ class Main {
     String choice="y";
     do{
     
-    int n, max=0 , count=0;
+    int n, max=0 , count=1;
     // take input from user 
     System.out.print("Enter a whole number > 0: " );
     n= sc.nextInt();
+    System.out.printf("The Collatz sequence for n = %d is:",n);
     //use while loop 
     while(n>1){
         count++;
@@ -21,21 +22,25 @@ class Main {
         // if (n%2==0) is for checking even numbers
         if (n%2==0){
             int result = n/2;
-            System.out.printf("%d is even, so %d /2=%d\n",n,n,result);
+            System.out.printf("%d ;",result);
             n=result;
         }
         else{
             int result = (n*3)+1;
-            System.out.printf("%d is odd, so %d *3=%d\n",n,n,result);
+            System.out.printf("%d ;",result);
             n=result;
             
         }
     }
-    System.out.println("number of terms = "+count);
-    System.out.println("Highest value reached = "+max);
+    //Number of terms
+    System.out.println("\nNumber of terms = "+count);
+    //Highest value
+    System.out.printf("Highest value reached = %,d \n",max);
+    // Ask the user if they want to do another one or not
     System.out.print("Do another? (y/n)");
     choice=sc.next();
     }
     while(choice.equals("y"));
+    System.out.print("Goodbye!");
     }
 }
