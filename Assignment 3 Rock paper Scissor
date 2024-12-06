@@ -1,0 +1,68 @@
+// import scanner
+import java.util.Scanner;
+class Main{
+  public static void main(String args[]){
+    //Make scanner a object
+    Scanner sc = new Scanner(System.in);
+    // asking how many times does the user want to play
+    System.out.print("How many times do you want to the game? - ");
+    int no_times=sc.nextInt();
+    int i=1, win=0, lose=0, tie=0;
+    do{
+    
+    int computer_choice= (int) (3*Math.random());
+    //System.out.printf("%d",computer_choice);
+    //cc means computer choice
+    char cc=' ';
+    if(computer_choice==0){
+      cc='r';
+    }
+    if(computer_choice==1){
+      cc='p';
+    }
+    if(computer_choice==2){
+      cc='s';
+    }
+    System.out.print("\nEnter your choice (r,p,s) - ");
+    char user_choice1=sc.next().charAt(0);
+    //if user uses the Upper case letter it will convert into the lower case first
+      char user_choice=Character.toLowerCase(user_choice1);
+    System.out.println("Computer's choice "+cc);
+    if(user_choice==cc){
+      System.out.println(" Tie Game ");
+      tie++;
+    }
+    else if((user_choice == 'p') && (cc == 'r')){
+      System.out.print("User Wins ");
+      win++;
+    }
+    else if((user_choice == 's') && (cc == 'p')){
+      System.out.print("User Wins ");
+      win++;
+
+    }
+    else if((user_choice == 'r') && (cc == 's')){
+      System.out.print("User Wins ");
+      win++;
+
+    }
+        else if((user_choice == 'r') && (cc == 'p')){
+      System.out.print("Computer Wins ");
+      lose++;
+    }
+    else if((user_choice == 'p') && (cc == 's')){
+      System.out.print("Computer Wins ");
+      lose++;
+    }
+    else if((user_choice == 's') && (cc == 'r')){
+      System.out.print("Computer Wins ");
+      lose++;
+    }
+    i++;
+    }
+    while (i<=no_times);
+    System.out.println("Wins = "+win);
+    System.out.println("Losses = "+lose);
+    System.out.println("Ties = "+tie);
+  }
+}
