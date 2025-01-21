@@ -1,7 +1,8 @@
+//Import Scanner
 import java.util.Scanner;
 import java.io.*;
 
-public class Main
+public class FinalProject1
 {
     static double finalBalance (double oldBal, double purchase, double payment) {
      double result = 0;
@@ -23,8 +24,9 @@ public class Main
 		   
 		   
 		try {
+       //Make Scanner into a object             
       Scanner fh = new Scanner(new File(fileName));
-      while (fh.hasNextLine()) { 
+      while (fh.hasNext()) { 
           count=count+1;
         String acountno = fh.next();
         double oldBal= fh.nextDouble();
@@ -42,14 +44,16 @@ public class Main
         } 
         //System.out.printf("%s %.2f %.2f %.2f \n", acountno,oldBal,purchase,payment);
         System.out.printf("%s %.2f\n",acountno, result);
+     
       } 
+      
       double avgbal= totalbal/count;
       System.out.printf("Maximum Balance = %s %.2f\n",maxacc,maximumbal);
       System.out.printf("Minimum Balance = %s %.2f\n",minacc,minimumbal);
-      System.out.printf("Average Balance - %.2f",avgbal);
+      System.out.printf("Average Balance = %.2f\n",avgbal);
       fh.close();
     } catch (Exception e) {
-      System.out.println(e.getMessage());
+      System.out.println("Error: " + e.getMessage());
     }
 
 	}
