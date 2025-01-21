@@ -1,0 +1,60 @@
+import java.util.Scanner;
+import java.io.*;
+
+public class Main
+{
+    static double finalBalance (double oldBal, double purchase, double payment) {
+     double result = 0;
+     double interest = 0.28;
+     // you need to put in your formula here
+    result = (1+interest/12)*oldBal-payment+purchase;
+     return result;
+}
+	public static void main(String[] args) {
+	    //double result=finalBalance(67.19,22,61.90
+		//System.out.println("Result - "+result);
+		   String fileName = "C:\\Users\\981834\\Documents\\NetBeansProjects\\FinalProject\\src\\finalproject\\ledger.dat";
+		   int count = 0;
+		   double totalbal=0;
+		   double minimumbal = Double.MAX_VALUE;
+		   double maximumbal = Double.MIN_VALUE;
+		   String minacc="";
+		   String maxacc="";
+		   
+		   
+		try {
+      Scanner fh = new Scanner(new File(fileName));
+      while (fh.hasNextLine()) { 
+          count=count+1;
+        String acountno = fh.next();
+        double oldBal= fh.nextDouble();
+        double purchase = fh.nextDouble();
+        double payment = fh.nextDouble();
+        double result=finalBalance(oldBal,purchase,payment);
+        totalbal = totalbal+result;
+        if(result>maximumbal){
+            maximumbal=result;
+            maxacc=acountno;
+        }
+        if (result< minimumbal){
+            minimumbal=result;
+            minacc=acountno;
+        } 
+        //System.out.printf("%s %.2f %.2f %.2f \n", acountno,oldBal,purchase,payment);
+        System.out.printf("%s %.2f\n",acountno, result);
+      } 
+      double avgbal= totalbal/count;
+      System.out.printf("Maximum Balance = %s %.2f\n",maxacc,maximumbal);
+      System.out.printf("Minimum Balance = %s %.2f\n",minacc,minimumbal);
+      System.out.printf("Average Balance - %.2f",avgbal);
+      fh.close();
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
+    }
+
+	}
+}
+
+
+
+
