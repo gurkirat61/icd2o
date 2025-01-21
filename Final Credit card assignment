@@ -28,11 +28,15 @@ public class FinalProject1
       Scanner fh = new Scanner(new File(fileName));
       while (fh.hasNext()) { 
           count=count+1;
-        String acountno = fh.next();
+        String acountno = fh.next(); 
+	// put oldBal in double
         double oldBal= fh.nextDouble();
+	//put purchase in double
         double purchase = fh.nextDouble();
+	//put payment in double
         double payment = fh.nextDouble();
         double result=finalBalance(oldBal,purchase,payment);
+	//put in formula to get totalbal
         totalbal = totalbal+result;
         if(result>maximumbal){
             maximumbal=result;
@@ -53,7 +57,7 @@ public class FinalProject1
       System.out.printf("Average Balance = %.2f\n",avgbal);
       fh.close();
     } catch (Exception e) {
-      System.out.println("Error: " + e.getMessage());
+      System.out.println(e.getMessage());
     }
 
 	}
